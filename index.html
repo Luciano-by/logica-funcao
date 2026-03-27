@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Aula7</title>
+</head>
+<body>
+    <h1>Aula 07 - Funções</h1>
+<div class="div-content" id="id-div-content">
+    <div class="div-class" id="id-div-soma">
+        <h2>SOMA</h2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_1">
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_2">
+        <button class="class-btn" id="inptBtn_1" onclick="sum()">Enviar Soma</button>
+        <p id="POutput_1" class="POutput">Saida</p>
+    </div>
+    <div class="div-class" id="id-div-sub" style="display: none;">
+        <H2>SUBTRAÇÃO</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_5">
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_6">
+        <button class="class-btn" id="inptBtn_3" onclick="sub()">Enviar Subtração</button>
+        <p id="POutput_3" class="POutput">Saida</p>
+    </div>
+    <div class="div-class" id="id-div-divisao" style="display: none;">
+        <H2>DIVISÃO</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_7">
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_8">
+        <button class="class-btn" id="inptBtn_4" onclick="divisao()">Enviar Divisão</button>
+        <p id="POutput_4" class="POutput">Saida</p>
+    </div>
+    <div class="div-class" id="id-div-mult" style="display: none;">
+        <H2>MULTIPLICAÇÃO</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_9">
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_10">
+        <button class="class-btn" id="inptBtn_5" onclick="Mult()">Enviar Multiplicação</button>
+        <p id="POutput_5" class="POutput">Saida</p>
+    </div>
+    <div class="div-class" id="id-div-raiz" style="display: none;">
+        <H2>RAIZ QUADRADA</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_11">
+        <button class="class-btn" id="inptBtn_6" onclick="Raiz()">Enviar Raiz Quadrada</button>
+        <p id="POutput_6" class="POutput">Saida</p>
+    </div>
+    <div class="div-class" id="id-div-pont" style="display: none;">
+        <H2>POTENCIA</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_12">
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_13">
+        <button class="class-btn" id="inptBtn_7" onclick="Pont()">Enviar Potencia</button>
+        <p id="POutput_7" class="POutput">Saida</p> 
+    </div>
+    <div class="div-class" id="id-div-media" >
+        <H2>MÉDIA</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_3">
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_4">
+        <button class="class-btn" id="inptBtn_2" onclick="media()">Enviar Media</button>
+        <p id="POutput_2" class="POutput">Saida</p>
+    </div>
+    <div class="div-class" id="id-div-tabuada-sum" style="display: none;">
+        <H2>Tabuada Soma</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS1">
+        <!-- <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS2"> -->
+        <button class="class-btn" id="inptBtn_TS" onclick="tabuadaSum()">Enviar Tabuada</button>
+        <!-- <p id="POutput_TS" class="POutput">Saida</p> -->
+         <div id="result"></div>
+    </div>
+    <div class="div-class" id="id-div-tabuada-sub" style="display: none;">
+        <H2>Tabuada Subtração</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS2">
+        <!-- <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS2"> -->
+        <button class="class-btn" id="inptBtn_TS2" onclick="tabuadaSub()">Enviar Tabuada</button>
+        <!-- <p id="POutput_TS" class="POutput">Saida</p> -->
+         <div id="result2"></div>
+    </div>
+    <div class="div-class" id="id-div-tabuada-divsao" style="display: none;">
+        <H2>Tabuada Divisão</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS3">
+        <!-- <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS2"> -->
+        <button class="class-btn" id="inptBtn_TS3" onclick="tabuadaDivsao()">Enviar Tabuada</button>
+        <!-- <p id="POutput_TS" class="POutput">Saida</p> -->
+         <div id="result3"></div>
+    </div>
+    <div class="div-class" id="id-div-tabuada-mult" style="display: none;">
+        <H2>Tabuada Multiplicação</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS4">
+        <!-- <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS2"> -->
+        <button class="class-btn" id="inptBtn_TS4" onclick="tabuadaMult()">Enviar Tabuada</button>
+        <!-- <p id="POutput_TS" class="POutput">Saida</p> -->
+         <div id="result4"></div>
+    </div>
+    <div class="div-class" id="id-div-tabuada-raiz" style="display: none;">
+        <H2>Tabuada Raiz Quadrada</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS5">
+        <!-- <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS2"> -->
+        <button class="class-btn" id="inptBtn_TS5" onclick="tabuadaRaiz()">Enviar Tabuada</button>
+        <!-- <p id="POutput_TS" class="POutput">Saida</p> -->
+         <div id="result5"></div>
+    </div>
+    <div class="div-class" id="id-div-tabuada-pont" style="display: none;">
+        <H2>Tabuada Potencia</H2>
+        <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS6">
+        <!-- <input type="number" placeholder="Numero" class="inptIn" id="inptNumber_TS2"> -->
+        <button class="class-btn" id="inptBtn_TS6" onclick="tabuadaPont()">Enviar Tabuada</button>
+        <!-- <p id="POutput_TS" class="POutput">Saida</p> -->
+         <div id="result6"></div>
+    </div>
+</div>
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #131313;
+    color: aqua;
+}
+.div-class
+{
+    /* background-color: red; */
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: solid aqua 1px;
+    border-radius: 15px;
+    /* width: 70%; */
+    /* transform: translateX(50%); */
+}
+.div-class h2,h1
+{
+    /* display: block; */
+    text-align: center;
+    font-size: 30px;
+    width: 70%;
+    transform: translateX(20%);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: solid aqua 1px;
+}
+h1
+{
+    /* margin-left: 20px; */
+    border: none;
+    border-radius: 0;
+    padding: 20px;
+    border-bottom: solid 1px aqua;
+    width: 100%;
+    transform: translateX(0);
+    /* position: fixed;
+    z-index: 1; */
+}
+.class-btn
+{
+    padding: 20px;
+    border: aqua solid 1px;
+    border-radius: 15px;
+    transition: .3s;
+    margin-bottom: 15px;
+    display: block;
+}
+.class-btn:hover,.inptIn:hover
+{
+    background-color: aqua;
+    color: #131313;
+}
+.POutput,p
+{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: aqua solid 1px;
+    border-radius: 10px;   
+}
+.inptIn
+{
+    margin-bottom: 15px;
+    border: solid 1px aqua;
+    height: 50px;
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    color: aqua;
+    border-radius: 15px;
+    transition: .3s;
+    font-size: 20px;
+    display: inline;
+}
+@media  (min-width: 705px)
+    {
+        .div-class
+        {
+            width: 70%;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        @media  (min-width: 1000px)
+        {
+            .div-class
+            {
+                width: 50%;
+            }
+        }
+    }
